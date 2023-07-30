@@ -5,3 +5,4 @@ tiktoken
 streamlit
 tiktoken
 pyodbc
+bs4 
