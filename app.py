@@ -17,14 +17,8 @@ from langchain.schema import SystemMessage
 import openai
 import streamlit as st
 import pyodbc
-from langdetect import detect
 
 
-from dotenv import load_dotenv
-load_dotenv()
-serper_api_key=os.getenv("serper_api_key")
-brwoserless_api_key=os.getenv("brwoserless_api_key")
-OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
 server = 'yanqing-sqlserver.database.windows.net'
 database = 'yanqing_sql'
 username = 'jiangyanqing90'
