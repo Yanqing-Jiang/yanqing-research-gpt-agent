@@ -19,12 +19,12 @@ import streamlit as st
 import pyodbc
 
 
-server = st.secrets[server]
-database = st.secrets[database]
-username = st.secrets[username]
-password = st.secrets[password]
+server = st.secrets["server"]
+database = st.secrets["database"]
+username = st.secrets["username"]
+password = st.secrets["password"]
 driver = '{ODBC Driver 17 for SQL Server}'
-brwoserless_api_key=st.secrets[brwoserless_api_key]
+brwoserless_api_key=st.secrets["brwoserless_api_key"]
 
 # 1. Tool for search
 
@@ -36,7 +36,7 @@ def search(query):
     })
 
     headers = {
-        'X-API-KEY': st.secrets[serper_api_key],
+        'X-API-KEY': st.secrets["serper_api_key"],
         'Content-Type': 'application/json'
     }
 
