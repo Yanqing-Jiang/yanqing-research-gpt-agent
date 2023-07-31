@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from langchain import PromptTemplate
 from langchain.agents import initialize_agent, Tool
 from langchain.agents import AgentType
@@ -176,7 +177,7 @@ agent = initialize_agent(
 def log_to_db(input_data, output_data):
     with pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password) as conn:
         with conn.cursor() as cursor:
-            cursor.execute("INSERT INTO [dbo].[gpt_exp_retrieval] (user_message, output_result,project_used) VALUES (?, ?,?)", (str(input_data), str(output_data),"research-gpt.agent"))
+            cursor.execute("INSERT INTO [dbo].[gpt_exp_retrieval] (user_message, output_result,project_used,log_time) VALUES (?, ?,?,?)", (str(input_data), str(output_data),"research-gpt.agent",datetime.now()))
                                                                                                                      
 
 
