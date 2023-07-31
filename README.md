@@ -4,8 +4,8 @@
 ## [Click here to navigate to Streamlit](https://yanqing-online-gpt-agent.streamlit.app)
 
 ## What's been used:
-- OpenAI GPT-3.5 Turbo
+- OpenAI GPT-3.5 Turbo (LLM for reasoning)
 - Serper (Google Search)
 - Browserless (no browser)
-- Langchain
-- Streamlit
+- Langchain (overall memory chain, agent, summerization)
+- Streamlit (UI)
