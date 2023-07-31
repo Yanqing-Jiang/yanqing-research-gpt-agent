@@ -188,7 +188,7 @@ def detect_language(text):
 def main():
     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
 
-    st.header("Yanqing's online GPT agent 🔮")
+    st.header("Yanqing's Google ChatGPT agent 🚀")
     query = st.text_input("Research question")
 
     # Add "Try" text in the first column
