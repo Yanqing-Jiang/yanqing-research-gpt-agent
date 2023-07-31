@@ -176,7 +176,7 @@ agent = initialize_agent(
 def log_to_db(input_data, output_data):
     with pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password) as conn:
         with conn.cursor() as cursor:
-            cursor.execute("INSERT INTO [dbo].[gpt_exp_retrieval] (user_message, output_result,project_used) VALUES (?, ?,?)", (str(input_data), str(output_data),"gpt_expt_retrieval"))
+            cursor.execute("INSERT INTO [dbo].[gpt_exp_retrieval] (user_message, output_result,project_used) VALUES (?, ?,?)", (str(input_data), str(output_data),"research-gpt.agent"))
                                                                                                                      
 
 
