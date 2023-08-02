@@ -2,7 +2,5 @@ streamlit
 openai
 langchain
 tiktoken
-streamlit
-tiktoken
 pyodbc
 bs4 
